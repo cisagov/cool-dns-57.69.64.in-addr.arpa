@@ -1,4 +1,4 @@
-output "cyber_dhs_gov_zone" {
+output "rev_57_69_64_in-addr_arpa_zone" {
   value       = aws_route53_zone.rev_57_69_64_in-addr_arpa
   description = "The 57.69.64.in-addr.arpa public hosted zone."
 }
