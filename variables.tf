@@ -20,7 +20,7 @@ variable "tags" {
   description = "Tags to apply to all AWS resources created"
   default = {
     Team        = "VM Fusion - Development"
-    Application = "COOL - DNS - cyber.dhs.gov"
+    Application = "COOL - DNS - 57.69.64.in-addr.arpa"
     Workspace   = "production"
   }
 }
@@ -32,5 +32,5 @@ variable "route53resourcechange_role_description" {
 
 variable "route53resourcechange_role_name" {
   description = "The name to assign the IAM role (as well as the corresponding policy) that allows sufficient permissions to modify resource records in the DNS zone."
-  default     = "Route53ResourceChange-cyber.dhs.gov"
+  default     = "Route53ResourceChange-57.69.64.in-addr.arpa"
 }

@@ -1,6 +1,6 @@
 # ------------------------------------------------------------------------------
 # Create the IAM policy that allows all of the route53 actions necessary to create and
-# modify resource records in the cyber.dhs.gov zone.
+# modify resource records in the 57.69.64.in-addr.arpa zone.
 # ------------------------------------------------------------------------------
 
 data "aws_iam_policy_document" "route53resourcechange_doc" {
@@ -11,7 +11,7 @@ data "aws_iam_policy_document" "route53resourcechange_doc" {
       "route53:GetHostedZone",
     ]
 
-    resources = ["arn:aws:route53:::hostedzone/${aws_route53_zone.cyber_dhs_gov.id}"]
+    resources = ["arn:aws:route53:::hostedzone/${aws_route53_zone.rev_57_69_64_in-addr_arpa.id}"]
   }
 
   statement {
