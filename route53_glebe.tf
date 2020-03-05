@@ -3,6 +3,8 @@
 # ------------------------------------------------------------------------------
 
 resource "aws_route53_record" "rev_1_PTR" {
+  provider = aws.route53resourcechange
+
   zone_id = aws_route53_zone.rev_57_69_64_in-addr_arpa.zone_id
   name    = "1.${aws_route53_zone.rev_57_69_64_in-addr_arpa.name}"
   type    = "PTR"
@@ -11,6 +13,8 @@ resource "aws_route53_record" "rev_1_PTR" {
 }
 
 resource "aws_route53_record" "rev_2_PTR" {
+  provider = aws.route53resourcechange
+
   zone_id = aws_route53_zone.rev_57_69_64_in-addr_arpa.zone_id
   name    = "2.${aws_route53_zone.rev_57_69_64_in-addr_arpa.name}"
   type    = "PTR"
@@ -19,6 +23,8 @@ resource "aws_route53_record" "rev_2_PTR" {
 }
 
 resource "aws_route53_record" "rev_3_PTR" {
+  provider = aws.route53resourcechange
+
   zone_id = aws_route53_zone.rev_57_69_64_in-addr_arpa.zone_id
   name    = "3.${aws_route53_zone.rev_57_69_64_in-addr_arpa.name}"
   type    = "PTR"
@@ -27,6 +33,8 @@ resource "aws_route53_record" "rev_3_PTR" {
 }
 
 resource "aws_route53_record" "rev_4_PTR" {
+  provider = aws.route53resourcechange
+
   zone_id = aws_route53_zone.rev_57_69_64_in-addr_arpa.zone_id
   name    = "4.${aws_route53_zone.rev_57_69_64_in-addr_arpa.name}"
   type    = "PTR"
