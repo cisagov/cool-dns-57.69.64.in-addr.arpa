@@ -1,39 +1,16 @@
-# cool-dns.cyber.dhs.gov #
+# cool-dns-57.69.64.in-addr.arpa #
 
-[![GitHub Build Status](https://github.com/cisagov/cool-dns.cyber.dhs.gov/workflows/build/badge.svg)](https://github.com/cisagov/cool-dns.cyber.dhs.gov/actions)
+[![GitHub Build Status](https://github.com/cisagov/cool-dns-57.69.64.in-addr.arpa/workflows/build/badge.svg)](https://github.com/cisagov/cool-dns-57.69.64.in-addr.arpa/actions)
 
-This is a generic skeleton project that can be used to quickly get a
-new [cisagov](https://github.com/cisagov) [Terraform
-module](https://www.terraform.io/docs/modules/index.html) GitHub
-repository started.  This skeleton project contains [licensing
-information](LICENSE), as well as [pre-commit
-hooks](https://pre-commit.com) and
-[GitHub Actions](https://github.com/features/actions) configurations
-appropriate for the major languages that we use.
-
-See [here](https://www.terraform.io/docs/modules/index.html) for more
-details on Terraform modules and the standard module structure.
+This repository contains a Terraform configuration that will provision the DNS zone
+`57.69.64.in-addr.arpa` within the COOL.  It creates an IAM role that allows sufficient
+permissions to modify resources records in this zone.  This role has a trust
+relationship with the users account.
 
 ## Usage ##
 
-```hcl
-module "example" {
-  source = "github.com/cisagov/cool-dns.cyber.dhs.gov"
-
-  aws_region            = "us-west-1"
-  aws_availability_zone = "b"
-  subnet_id             = "subnet-0123456789abcdef0"
-
-  tags = {
-    Key1 = "Value1"
-    Key2 = "Value2"
-  }
-}
-```
-
-## Examples ##
-
-* [Deploying into the default VPC](https://github.com/cisagov/cool-dns.cyber.dhs.gov/tree/develop/examples/default_vpc)
+1. Run the command `terraform init`.
+1. Run the command `terraform apply`.
 
 ## Inputs ##
 
@@ -41,15 +18,15 @@ module "example" {
 |------|-------------|------|---------|:-----:|
 | aws_region | The AWS region to communicate with. | `string` | `us-east-1` | no |
 | route53resourcechange_role_description | The description to associate with the IAM role (as well as the corresponding policy) that allows sufficient permissions to modify resource records in the DNS zone. | `string` | `Allows sufficient permissions to modify resource records in the DNS zone.` | no |
-| route53resourcechange_role_name | The name to assign the IAM role (as well as the corresponding policy) that allows sufficient permissions to modify resource records in the DNS zone. | `string` | `Route53ResourceChange-cyber.dhs.gov` | no |
-| tags | Tags to apply to all AWS resources created | `map(string)` | `{"Application": "COOL - DNS - cyber.dhs.gov", "Team": "VM Fusion - Development", "Workspace": "production"}` | no |
+| route53resourcechange_role_name | The name to assign the IAM role (as well as the corresponding policy) that allows sufficient permissions to modify resource records in the DNS zone. | `string` | `Route53ResourceChange-57.69.64.in-addr.arpa` | no |
+| tags | Tags to apply to all AWS resources created | `map(string)` | `{"Application": "COOL - DNS - 57.69.64.in-addr.arpa", "Team": "VM Fusion - Development", "Workspace": "production"}` | no |
 
 ## Outputs ##
 
 | Name | Description |
 |------|-------------|
-| cyber_dhs_gov_zone | The cyber.dhs.gov public hosted zone. |
-| route53resourcechange_role | IAM role that allows sufficient permissions to modify resource records in the cyber.dhs.gov zone. |
+| rev_57_69_64_in-addr_arpa_zone | The 57.69.64.in-addr.arpa public hosted zone. |
+| route53resourcechange_role | IAM role that allows sufficient permissions to modify resource records in the 57.69.64.in-addr.arpa zone. |
 
 ## Contributing ##
 
