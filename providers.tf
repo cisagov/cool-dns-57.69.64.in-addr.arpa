@@ -4,6 +4,9 @@
 
 provider "aws" {
   region = var.aws_region
+  default_tags {
+    tags = var.tags
+  }
 }
 
 # The provider used to create new public hosted zones.
@@ -13,6 +16,9 @@ provider "aws" {
   assume_role {
     role_arn     = data.terraform_remote_state.dns.outputs.provisionaccount_role.arn
     session_name = local.caller_user_name
+  }
+  default_tags {
+    tags = var.tags
   }
 }
 
@@ -24,6 +30,9 @@ provider "aws" {
     role_arn     = data.terraform_remote_state.master.outputs.organizationsreadonly_role.arn
     session_name = local.caller_user_name
   }
+  default_tags {
+    tags = var.tags
+  }
 }
 
 # The provider that uses the newly-created role to modify zone resources.
@@ -33,5 +42,8 @@ provider "aws" {
   assume_role {
     role_arn     = aws_iam_role.route53resourcechange_role.arn
     session_name = local.caller_user_name
+  }
+  default_tags {
+    tags = var.tags
   }
 }

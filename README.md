@@ -28,9 +28,14 @@ relationship with the users account.
 | rev_57_69_64_in-addr_arpa_zone | The 57.69.64.in-addr.arpa public hosted zone. |
 | route53resourcechange_role | IAM role that allows sufficient permissions to modify resource records in the 57.69.64.in-addr.arpa zone. |
 
+## Notes ##
+
+Running `pre-commit` requires running `terraform init` in every directory that
+contains Terraform code. In this repository, this is just the main directory.
+
 ## Contributing ##
 
-We welcome contributions!  Please see [here](CONTRIBUTING.md) for
+We welcome contributions!  Please see [`CONTRIBUTING.md`](CONTRIBUTING.md) for
 details.
 
 ## License ##
