@@ -19,9 +19,9 @@ locals {
   # Extract the user name of the current caller for use as assume role session names.
   caller_user_name = split("/", data.aws_caller_identity.current.arn)[1]
 
-  # Find the new Users account by name and email.
+  # Find the Users account by name.
   users_account_id = [
     for x in data.aws_organizations_organization.cool.accounts :
-    x.id if x.name == "Users" && length(regexall("2020", x.email)) > 0
+    x.id if x.name == "Users"
   ][0]
 }
