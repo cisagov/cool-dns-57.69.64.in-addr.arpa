@@ -7,5 +7,4 @@ resource "aws_route53_zone" "rev_57_69_64_in-addr_arpa" {
 
   delegation_set_id = data.terraform_remote_state.dns.outputs.primary_delegation_set.id
   name              = "57.69.64.in-addr.arpa."
-  tags              = var.tags
 }
