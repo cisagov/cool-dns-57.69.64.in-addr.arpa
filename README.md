@@ -59,7 +59,7 @@ No modules.
 | aws\_region | The AWS region to communicate with. | `string` | `"us-east-1"` | no |
 | route53resourcechange\_role\_description | The description to associate with the IAM role (as well as the corresponding policy) that allows sufficient permissions to modify resource records in the DNS zone. | `string` | `"Allows sufficient permissions to modify resource records in the DNS zone."` | no |
 | route53resourcechange\_role\_name | The name to assign the IAM role (as well as the corresponding policy) that allows sufficient permissions to modify resource records in the DNS zone. | `string` | `"Route53ResourceChange-57.69.64.in-addr.arpa"` | no |
-| tags | Tags to apply to all AWS resources created | `map(string)` | `{}` | no |
+| tags | Tags to apply to all AWS resources created. | `map(string)` | `{}` | no |
 
 ## Outputs ##
 
