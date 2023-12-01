@@ -12,21 +12,22 @@ relationship with the users account.
 1. Run the command `terraform init`.
 1. Run the command `terraform apply`.
 
+<!-- BEGIN_TF_DOCS -->
 ## Requirements ##
 
 | Name | Version |
 |------|---------|
 | terraform | ~> 1.0 |
-| aws | ~> 3.38 |
+| aws | ~> 4.9 |
 
 ## Providers ##
 
 | Name | Version |
 |------|---------|
-| aws | ~> 3.38 |
-| aws.dnsprovisionaccount | ~> 3.38 |
-| aws.organizationsreadonly | ~> 3.38 |
-| aws.route53resourcechange | ~> 3.38 |
+| aws | ~> 4.9 |
+| aws.dnsprovisionaccount | ~> 4.9 |
+| aws.organizationsreadonly | ~> 4.9 |
+| aws.route53resourcechange | ~> 4.9 |
 | terraform | n/a |
 
 ## Modules ##
@@ -67,6 +68,13 @@ No modules.
 |------|-------------|
 | rev\_57\_69\_64\_in-addr\_arpa\_zone | The 57.69.64.in-addr.arpa public hosted zone. |
 | route53resourcechange\_role | IAM role that allows sufficient permissions to modify resource records in the 57.69.64.in-addr.arpa zone. |
+<!-- END_TF_DOCS -->
+
+## Notes ##
+
+Running `pre-commit` requires running `terraform init` in every
+directory that contains Terraform code. In this repository, this is
+only the main directory.
 
 ## Contributing ##
 
