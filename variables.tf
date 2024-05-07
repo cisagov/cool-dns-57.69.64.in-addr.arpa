@@ -17,19 +17,19 @@ variable "aws_region" {
 }
 
 variable "route53resourcechange_role_description" {
-  type        = string
-  description = "The description to associate with the IAM role (as well as the corresponding policy) that allows sufficient permissions to modify resource records in the DNS zone."
   default     = "Allows sufficient permissions to modify resource records in the DNS zone."
+  description = "The description to associate with the IAM role (as well as the corresponding policy) that allows sufficient permissions to modify resource records in the DNS zone."
+  type        = string
 }
 
 variable "route53resourcechange_role_name" {
-  type        = string
-  description = "The name to assign the IAM role (as well as the corresponding policy) that allows sufficient permissions to modify resource records in the DNS zone."
   default     = "Route53ResourceChange-57.69.64.in-addr.arpa"
+  description = "The name to assign the IAM role (as well as the corresponding policy) that allows sufficient permissions to modify resource records in the DNS zone."
+  type        = string
 }
 
 variable "tags" {
-  type        = map(string)
-  description = "Tags to apply to all AWS resources created."
   default     = {}
+  description = "Tags to apply to all AWS resources created."
+  type        = map(string)
 }
