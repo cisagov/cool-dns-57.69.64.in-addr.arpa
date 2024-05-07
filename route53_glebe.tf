@@ -5,39 +5,39 @@
 resource "aws_route53_record" "rev_1_PTR" {
   provider = aws.route53resourcechange
 
-  zone_id = aws_route53_zone.rev_57_69_64_in-addr_arpa.zone_id
   name    = "1.${aws_route53_zone.rev_57_69_64_in-addr_arpa.name}"
-  type    = "PTR"
-  ttl     = 300
   records = ["router.ncats.cyber.dhs.gov."]
+  ttl     = 300
+  type    = "PTR"
+  zone_id = aws_route53_zone.rev_57_69_64_in-addr_arpa.zone_id
 }
 
 resource "aws_route53_record" "rev_2_PTR" {
   provider = aws.route53resourcechange
 
-  zone_id = aws_route53_zone.rev_57_69_64_in-addr_arpa.zone_id
   name    = "2.${aws_route53_zone.rev_57_69_64_in-addr_arpa.name}"
-  type    = "PTR"
-  ttl     = 300
   records = ["vip.ncats.cyber.dhs.gov."]
+  ttl     = 300
+  type    = "PTR"
+  zone_id = aws_route53_zone.rev_57_69_64_in-addr_arpa.zone_id
 }
 
 resource "aws_route53_record" "rev_3_PTR" {
   provider = aws.route53resourcechange
 
-  zone_id = aws_route53_zone.rev_57_69_64_in-addr_arpa.zone_id
   name    = "3.${aws_route53_zone.rev_57_69_64_in-addr_arpa.name}"
-  type    = "PTR"
-  ttl     = 300
   records = ["fw01.ncats.cyber.dhs.gov."]
+  ttl     = 300
+  type    = "PTR"
+  zone_id = aws_route53_zone.rev_57_69_64_in-addr_arpa.zone_id
 }
 
 resource "aws_route53_record" "rev_4_PTR" {
   provider = aws.route53resourcechange
 
-  zone_id = aws_route53_zone.rev_57_69_64_in-addr_arpa.zone_id
   name    = "4.${aws_route53_zone.rev_57_69_64_in-addr_arpa.name}"
+  records = ["fw02.ncats.cyber.dhs.gov."]
   type    = "PTR"
   ttl     = 300
-  records = ["fw02.ncats.cyber.dhs.gov."]
+  zone_id = aws_route53_zone.rev_57_69_64_in-addr_arpa.zone_id
 }
