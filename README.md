@@ -1,6 +1,8 @@
 # cool-dns-57.69.64.in-addr.arpa #
 
 [![GitHub Build Status](https://github.com/cisagov/cool-dns-57.69.64.in-addr.arpa/workflows/build/badge.svg)](https://github.com/cisagov/cool-dns-57.69.64.in-addr.arpa/actions)
+[![License](https://img.shields.io/github/license/cisagov/cool-dns-57.69.64.in-addr.arpa)](https://spdx.org/licenses/)
+[![CodeQL](https://github.com/cisagov/cool-dns-57.69.64.in-addr.arpa/workflows/CodeQL/badge.svg)](https://github.com/cisagov/cool-dns-57.69.64.in-addr.arpa/actions/workflows/codeql-analysis.yml)
 
 This repository contains a Terraform configuration that will provision the DNS zone
 `57.69.64.in-addr.arpa` within the COOL.  It creates an IAM role that allows sufficient
